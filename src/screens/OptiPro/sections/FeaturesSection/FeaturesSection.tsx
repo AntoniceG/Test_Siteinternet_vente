@@ -23,7 +23,7 @@ export const FeaturesSection = (): JSX.Element => {
     return (
         <section id="solution" className="flex flex-col max-w-[1312px] items-center gap-20 px-8 py-24 relative w-full bg-zinc-950">
             <div className="flex flex-col items-center gap-6 max-w-[800px] text-center">
-                <h2 className="font-text-5xl-font-semibold font-[number:var(--text-5xl-font-semibold-font-weight)] text-neutral-50 text-[length:var(--text-5xl-font-semibold-font-size)] tracking-[var(--text-5xl-font-semibold-letter-spacing)] leading-[var(--text-5xl-font-semibold-line-height)] [font-style:var(--text-5xl-font-semibold-font-style)]">
+                <h2 className="font-text-5xl-font-semibold font-[number:var(--text-5xl-font-semibold-font-weight)] text-neutral-50 text-[length:var(--text-5xl-font-semibold-font-size)] tracking-tighter leading-tight [font-style:var(--text-5xl-font-semibold-font-style)]">
                     Ce que nous faisons différemment
                 </h2>
                 <p className="font-text-xl-font-medium font-[number:var(--text-xl-font-medium-font-weight)] text-zinc-400 text-[length:var(--text-xl-font-medium-font-size)] tracking-[var(--text-xl-font-medium-letter-spacing)] leading-[var(--text-xl-font-medium-line-height)] [font-style:var(--text-xl-font-medium-font-style)]">
@@ -35,16 +35,17 @@ export const FeaturesSection = (): JSX.Element => {
                 {mainFeatures.map((feature, index) => (
                     <Card
                         key={index}
-                        className="flex flex-col bg-zinc-900/50 border-zinc-800 hover:border-zinc-700 transition-colors"
+                        className="group flex flex-col bg-zinc-900/40 border-zinc-800 hover:border-emerald-500/50 hover:bg-zinc-800/40 transition-all duration-500 relative overflow-hidden"
                     >
-                        <CardContent className="flex flex-col items-start gap-4 p-8">
-                            <div className="p-3 rounded-lg bg-zinc-800">
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <CardContent className="flex flex-col items-start gap-4 p-8 relative z-10">
+                            <div className="p-3 rounded-lg bg-zinc-800 group-hover:bg-emerald-500/10 group-hover:scale-110 transition-all duration-500">
                                 {feature.icon}
                             </div>
-                            <h3 className="font-text-lg-font-semibold font-[number:var(--text-lg-font-semibold-font-weight)] text-neutral-50 text-[length:var(--text-lg-font-semibold-font-size)] tracking-[var(--text-lg-font-semibold-letter-spacing)] leading-[var(--text-lg-font-semibold-line-height)] [font-style:var(--text-lg-font-semibold-font-style)]">
+                            <h3 className="font-text-lg-font-semibold font-[number:var(--text-lg-font-semibold-font-weight)] text-neutral-50 text-[length:var(--text-lg-font-semibold-font-size)] tracking-tight leading-[var(--text-lg-font-semibold-line-height)] [font-style:var(--text-lg-font-semibold-font-style)]">
                                 {feature.title}
                             </h3>
-                            <p className="font-text-base-font-normal font-[number:var(--text-base-font-normal-font-weight)] text-zinc-400 text-[length:var(--text-base-font-normal-font-size)] tracking-[var(--text-base-font-normal-letter-spacing)] leading-[var(--text-base-font-normal-line-height)] [font-style:var(--text-base-font-normal-font-style)]">
+                            <p className="font-text-base-font-normal font-[number:var(--text-base-font-normal-font-weight)] text-zinc-400 text-[length:var(--text-base-font-normal-font-size)] tracking-[var(--text-base-font-normal-letter-spacing)] leading-relaxed [font-style:var(--text-base-font-normal-font-style)]">
                                 {feature.description}
                             </p>
                         </CardContent>
