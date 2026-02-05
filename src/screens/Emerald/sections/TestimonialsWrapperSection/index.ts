@@ -1,0 +1,1 @@
+export { TestimonialsWrapperSection } from "./TestimonialsWrapperSection";
